@@ -1,22 +1,48 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
+int main(){
 
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
 
-    return 0;
+int pontoturistico, pib;
+float area, populacao, densidade, capital, media;
+char cidade[60];
+
+printf("---Carta 1A01---\n");
+
+printf("nome da cidade: %s\n", cidade);
+fgets(cidade, 60, stdin);
+
+printf("populacao: ");
+scanf("%f", &populacao);
+
+printf("area: ");
+scanf("%f", &area);
+
+printf("pib: ");
+scanf("%d", &pib);
+
+printf("pontos turisticos: ");
+scanf("%d", &pontoturistico);
+
+densidade = populacao/area;
+capital = pib/populacao;
+
+printf("densidade populacional: %2f", densidade);
+printf("pib per capta: %.2f", capital);
+
+(media = (float) pontoturistico + pib + area + populacao + densidade + capital / 6);
+
+printf("\n---Dados gerais---\n");
+
+printf("nome da cidade: %s\n", cidade);
+printf("area: %f km\n", area);
+printf("pib: %d bilhoes de reais\n", pib);
+printf("populacao: %f\n", populacao);
+printf("ponto turistico: %d na sua cidade\n", pontoturistico);
+printf("densidade populacional: %.2f\n", densidade);
+printf("pib per capta: %.2f\n", capital);
+printf("super trunfo: %.2f (power card)\n", media);
+
+return 0;
+
 }
